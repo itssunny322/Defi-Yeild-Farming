@@ -42,7 +42,7 @@ Decentrabank focuses on developing a DeFi app which implements the concept of yi
 
 ---
 ## Setup
-1. git clone git@gitlab.mindfire.co.in:sunnys/lendandborrow.git
+1. git clone git@github.com:itssunny322/Defi-Yeild-Farming.git
 2. cd lendandborrow
 3. npm install
 4. truffle compile
