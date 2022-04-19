@@ -1,0 +1,22 @@
+@startuml
+' List order
+
+hide footbox
+center header \n<font color=black size=15>Loan</font> \n\n
+
+skinparam dpi 150
+skinparam sequence {
+
+}
+
+Borrower -> "Pool": Connects via Metamask
+activate "Pool"
+
+Borrower-> "Pool": Request for the amount of token to borrow
+
+Borrower-> "Pool": Deposit the collateral for the requested amount
+
+Pool-> "Borrower": Tokens get transferred to user and collateral get locked
+
+@enduml
+

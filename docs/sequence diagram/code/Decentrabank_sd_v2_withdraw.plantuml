@@ -1,0 +1,20 @@
+@startuml
+' List order
+
+hide footbox
+center header \n<font color=black size=15>Withdraw</font> \n\n
+
+skinparam dpi 150
+skinparam sequence {
+
+}
+
+Lender -> "Pool": Connects via Metamask
+activate "Pool"
+
+Lender -> "Pool": Request the amount to withdraw
+
+Pool -> "Lender": Requested amount get transferred to Lender
+
+@enduml
+

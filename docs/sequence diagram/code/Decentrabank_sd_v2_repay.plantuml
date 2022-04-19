@@ -1,0 +1,24 @@
+@startuml
+' List order
+
+hide footbox
+center header \n<font color=black size=15>Repay</font> \n\n
+
+skinparam dpi 150
+skinparam sequence {
+
+}
+
+Borrower -> "Pool": Connects via Metamask
+activate "Pool"
+
+Borrower-> "Pool": Select the loan borrower wants to repay
+
+Borrower-> "Pool": Payback the loan amount with interest
+
+Borrower-> "Pool": Gets the collateral unlocked
+
+Pool-> "Borrower": Claim the collateral
+
+@enduml
+

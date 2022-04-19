@@ -1,0 +1,30 @@
+@startuml
+' List order
+
+hide footbox
+center header \n<font color=black size=15>Decentrabank</font> \n\n
+
+skinparam dpi 150
+skinparam sequence {
+
+}
+
+Lender -> "Pool": Deposit DAI
+activate "Pool"
+
+
+Borrower -> "Pool": Deposit Collateral as ETH
+activate "Pool"
+
+Borrower-> "Pool": Borrow loan as DAI
+activate "Pool"
+
+Borrower-> "Pool": Payback the loan with interest
+activate "Pool"
+
+Pool -> "Borrower": Gets back the collateral
+activate "Borrower"
+
+Pool -> "Lender" : Withdraw the deposited amount with interest
+activate "Lender"
+@enduml

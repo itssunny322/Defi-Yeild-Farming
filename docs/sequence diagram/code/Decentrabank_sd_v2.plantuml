@@ -1,0 +1,29 @@
+@startuml
+' List order
+
+hide footbox
+center header \n<font color=black size=15>Decentrabank</font> \n\n
+
+skinparam dpi 150
+skinparam sequence {
+
+}
+
+Lender -> "Pool": Register new ERC20 token through governance
+activate "Pool"
+
+Lender -> "Pool": Deposit ETH or registered ERC20 token
+
+Borrower -> "Pool": Deposit Collateral as ETH or any registered token
+
+Borrower-> "Pool": Borrow any registered token
+
+Borrower-> "Pool": Payback the loan with interest
+
+Borrower-> "Pool": Gets the collateral unlocked
+
+Pool -> "Borrower": Claim the unlocked collateral
+activate "Borrower"
+
+Pool -> "Lender" : Withdraw the deposited amount with interest
+@enduml
